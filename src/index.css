@@ -1,0 +1,106 @@
+/* src/index.css */
+
+/* Global Styles */
+body {
+  font: 14px 'Century Gothic', Futura, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom right, #ff00009b, #ff800086, #ffff0089, #00ff007a, #00ffff82, #0000ff53, #8c00ff57); /* Gradient background with 7 colors */
+}
+
+/* List Styles */
+ol, ul {
+  padding-left: 30px;
+}
+
+/* Board Row Styles */
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+
+/* Square Styles */
+.square {
+  background: rgba(173, 216, 230, 0.444); /* Set the background color to a semi-transparent light blue */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Set the border color to a semi-transparent black */
+  border-radius: 10px; /* Add a border radius to make the square look more rounded */
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 50px; /* Set the height to 50% of the viewport height */
+  width: 50px; /* Set the width to 50% of the viewport width */
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  margin: 3px; /* Add a margin to create gaps between the boxes */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a box shadow to create a border effect */
+
+}
+
+.square:focus {
+  outline: none;
+}
+
+/* Winning Square Styles */
+.square.winning {
+  background-color: rgba(0, 255, 38, 0.2);
+  animation: winning-animation 1s ease-out;
+}
+
+@keyframes winning-animation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* Keyboard Navigation Styles */
+.kbd-navigation.square:focus {
+  background: #ddd;
+}
+
+/* Game Styles */
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Game Info Styles */
+.game-info {
+  margin-left: 20px;
+  text-align: center;
+}
+
+
+
+
+.step-back-button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.step-back-button:hover {
+  background-color: #3e8e41;
+}
